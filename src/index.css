@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light;
+
+  /* Palette — POS terminal style, blue brand */
+  --color-bg: #eef0f3;
+  --color-surface: #ffffff;
+  --color-ink: #16202e;
+  --color-ink-muted: #64748b;
+  --color-accent: #2563eb;
+  --color-accent-dark: #1d4ed8;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-border: #cbd3dd;
+
+  /* Category quick-key colors (flat, high-contrast, scannable at a glance) */
+  --color-cat-sandwich: #f2a93b;
+  --color-cat-sandwich-text: #4a2e00;
+  --color-cat-drink: #2fa8a0;
+  --color-cat-drink-text: #ffffff;
+
+  --radius: 3px;
+
+  /* Type */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
