@@ -8,6 +8,7 @@ import { closeDay } from "../reports/dayClose";
 import { dateKeyFor, todayKey, useDayClose } from "../reports/useDayClose";
 import { useOpenPeriod } from "../reports/useOpenPeriod";
 import { formatUSD, formatLBP } from "../../lib/currency";
+import { printTickets } from "./printTickets";
 
 const CATEGORY_COLORS = [
   { bg: "#f2a93b", text: "#4a2e00" },
@@ -80,6 +81,8 @@ export default function CashierView() {
     checkoutSale({ items: cart, total, cashier: session.name }).catch((err) => {
       console.error("Checkout failed:", err);
     });
+
+    printTickets({ items: cart, total, cashier: session.name });
 
     setCart([]);
     setMessage("Sale recorded.");
