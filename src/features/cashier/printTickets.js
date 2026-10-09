@@ -1,6 +1,6 @@
 import { formatUSD, formatLBP } from "../../lib/currency";
 
-const SHOP_NAME = "سناك عمو وسام"; // <-- change this
+const SHOP_NAME = "سناك عمو وسام"; // 
 const FOOTER_TEXT = "Thank you!";
 
 function esc(s) {
